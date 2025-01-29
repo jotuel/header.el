@@ -1,11 +1,11 @@
-## 42 header for emacs
+## header for emacs
 
 ###  Install using the script :
 
 ```bash
-git clone https://github.com/ggjulio/42header_emacs.git
-cd 42header_emacs
-./set_header.sh marvin marvin@42.fr         # usage :  ./set_header.sh [LOGIN] [MAIL]
+git clone https://github.com/jotuel/header.el.git
+cd header.el
+./set_header.sh workerbee bzzZZz@student.hive.fi         # usage :  ./set_header.sh [LOGIN] [MAIL]
 source ~/.zshrc
 cd ..
 rm -rf 42header_emacs
@@ -25,3 +25,14 @@ Header shortcut (C - C H) is now functional.
 	  2/ And run source ~/.zshrc or source ~/.bashrc to reload the source file
    	  
 3) Header shortcut (C - C H) is now functional.
+
+### Recommendation
+
+Install Doom Emacs and `mv *.el ~/.config/doom/` + add following lines:
+```
+(load! "list.el")
+(load! "string")
+(load! "comments.el")
+(load! "header.el")
+```
+to `config.el`. Run `doom sync` && enjoy.
